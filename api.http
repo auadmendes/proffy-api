@@ -1,0 +1,123 @@
+POST http://localhost:4444/users
+Content-Type: application/json
+
+
+{
+    "title": 7888,
+    "details": "evento de test 222",
+    "maximumAttendees": 1
+}
+
+
+###
+
+
+POST http://localhost:4444/create-user
+Content-Type: application/json
+
+
+{
+    "name": "John Doe",
+    "avatar": "https://i.pravatar.cc/150?img=3",
+    "whatsapp": "27 998642268",
+    "bio": "Instrutor de academia",
+    "email": "john.does@gmail.com",
+    "password": "12345678",
+    "instagram": "https://www.instagram.com/musas.gym/",
+    "facebook": null,
+    "youtube": "https://www.youtube.com/watch?v=qDlkswTNYQQ"
+}
+
+###
+
+
+POST http://localhost:4444/users/ec8fdb53-282e-4c0b-95de-2de7bd90233f/classes
+Content-Type: application/json
+
+
+{
+    "subject": "Séries Iniciais"
+}
+
+
+###
+
+
+POST http://localhost:4444/connections
+Content-Type: application/json
+
+
+{
+    "userId": "69f383e8-2e06-45d9-9ea3-a355b89dd38d"
+}
+
+
+###
+
+
+POST http://localhost:4444/availability
+Content-Type: application/json
+
+
+{
+    "day": 3,
+    "startTime": 4980,
+    "endTime": 840,
+    "cost": 75.50,
+    "userId": "69f383e8-2e06-45d9-9ea3-a355b89dd38d",
+    "classId": 4
+
+}
+
+###
+
+
+GET http://localhost:4444/availability
+
+
+###
+
+GET http://localhost:4444/classes
+
+###
+
+GET http://localhost:4444/availability?classId=3&weekDay=2&classTime=4980
+//GET http://localhost:4444/availability?classId=Educa%C3%A7%C3%A3o%20financeira&weekDay=1&classTime=4980
+
+###
+
+
+GET http://localhost:4444/connections/count
+
+
+###
+POST http://localhost:4444/get-user
+Content-Type: application/json
+
+{
+    "email": "luciano.auad@gmail.com",
+    "password": "12345678"
+}
+###
+
+
+POST http://localhost:4444/availability
+Content-Type: application/json
+
+
+{
+    "userId": "13984049-1628-46dd-aae8-95fe7a6b7ac5",
+    "classId": 5,
+    "cost": 80,
+    "scheduleItems": 
+    [
+        {
+            "week_day": 2,
+            "from": "08:00",
+            "to": "13:01"
+        }
+    ]
+
+}
+
+###
